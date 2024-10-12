@@ -9,11 +9,11 @@ import humidity_icon from '../assets/humidity.png'
 // import snow_icon from '../assets/snow.png'
 import wind_icon from '../assets/wind.png'
 const Weather = () => {
-    const search = async (city) => {
+    const Search = async(city) => {
         try {
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_APP_ID}`
-            const responce = await fetch(url);
-            const data = await responce.json();
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_APP_ID}`;
+            const response = await fetch(url);
+            const data = await response.json();
             console.log(data);
         
         } catch (error) {
@@ -24,7 +24,7 @@ const Weather = () => {
     }
     
     useEffect(() => {
-        search("London");
+        Search("London");
     },[])
 
 
