@@ -10,10 +10,7 @@ import snow_icon from '../assets/snow.png';
 import wind_icon from '../assets/wind.png';
 
 const Weather = () => {
-    if (city==="") {
-        alert("Enter City Name ")
-        return;
-    }
+   
     const inputRef = useRef()
     const [weatherData, setWeatherdata] = useState({});
     const allIcons = {
@@ -33,6 +30,11 @@ const Weather = () => {
     };
 
     const Search = async (city) => {
+        if (city==="") {
+            alert("Please Enter City Name ")
+            return;
+        }
+
         try {
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
             const response = await fetch(url);
