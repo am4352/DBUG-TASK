@@ -49,5 +49,5 @@ This app uses a weather API to fetch weather data. Make sure to replace `your_ap
 This project is licensed under the MIT License.
 
 ## Author
-Your Name
+anuj
 
